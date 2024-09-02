@@ -1,0 +1,85 @@
+.div{
+    position:relative;
+    top: 10vh;
+    background-color: rgb(0, 0, 0);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    padding-top: 18vh;
+}
+.left{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 25px;
+    width: 28vw;
+}
+.left>h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.left>div{
+    font-size: 24px;
+    opacity: 80%;
+}
+.right{
+    width: 30vw;
+    height: fit-content;
+    background-color: rgba(106, 0, 255, 0.51);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px #9a40dfe1;
+    margin:0 0 10% 0;
+}
+.form{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+}
+.input,.textarea{
+    background-color: antiquewhite;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: antiquewhite;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.disable{
+    cursor: not-allowed;
+    background-color: red;
+}
+
+.p{
+    font-size: 16px;
+    font-weight: bold;;
+}
+@media only screen and (max-width: 800px) {
+    .div{
+        top:0;
+        padding-top: 13vh;
+    }
+    .left{
+        width: 90vw;
+    }
+    .left>h1{
+        font-size: 40px;
+    }
+    .left>div{
+        font-size: 20px;
+    }
+    .right{
+        width: 90vw;
+        margin: 20% 0;
+    }
+}

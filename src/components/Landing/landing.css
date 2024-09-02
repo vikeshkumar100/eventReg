@@ -1,0 +1,54 @@
+.outer-box{
+    width: 100%;
+    min-height: 100vh;
+    background-image:url(/public/header.webp);
+    background-size: cover;
+    color: white;
+    background-blend-mode:darken;
+}
+.main{
+    width: 100vw;
+    height:80vh;
+    display: flex;
+    align-items: center;
+    justify-items:center;
+    justify-content: space-evenly;
+}
+.card{
+    border: 1px white solid;
+    border-radius: 20px;
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;
+    transition: all ease-in 0.4s;
+    background-color: rgba(252, 230, 255, 0.314);
+}
+.card:hover{
+    font-size: 50px;
+    background-color: #8119ff71;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
+    transform: scale(102%);
+}
+.card:hover .data{
+    background-color: rgb(184, 184, 184);
+    width: 100%;
+    text-align: center;
+    border-radius: 60px 0px 60px 0px;
+    padding: 2px;
+}
+.footer{
+    z-index: 9999;
+    position:relative;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(154, 154, 154, 0.533);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    bottom: 2vh;
+}

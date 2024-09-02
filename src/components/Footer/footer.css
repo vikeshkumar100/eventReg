@@ -1,0 +1,71 @@
+.footer-box {
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.footer-content {
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+}
+
+.footer-icon {
+    /* border: 2px solid red; */
+    font-size: 50px;
+    color: aliceblue;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+}
+
+.footer-icon a,
+span {
+    background-color: transparent;
+}
+
+.footer-icon img {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+}
+
+.footer-icon img:hover {
+    width: 45px;
+    height: 45px;
+    transform: rotate(360deg);
+    transition: all ease-in-out 0.4s 0.1s;
+}
+
+.footer-icon img:active {
+    width: 35px;
+    height: 35px;
+    transition: all ease-in-out 0.2s;
+    transform: rotate(-360deg);
+}
+
+.footer-logo a {
+    /* border: 2px solid red; */
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 4px 15px aqua;
+}
+
+.footer-logo:hover {
+    transition: all ease-in-out 0.3s;
+    transform: scale(110%);
+}
+@media only screen and (max-width: 800px) {
+    .footer-icon {
+        width: 90vw !important;
+    }
+}
