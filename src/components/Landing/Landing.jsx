@@ -7,12 +7,12 @@ const Landing = () => {
         <div className='outer-box'>
             <div className='main'>
                 <Link to='/events'>
-                <div className='card'>
+                <div className='l-card'>
                     <div className="data">Register</div>
                 </div>
                 </Link>
                 <Link to='/admin'>
-                <div className='card'>
+                <div className='l-card'>
                     <div className="data">Event organizer</div>
                 </div>
                 </Link>

@@ -1,0 +1,30 @@
+.container{
+    margin-top: 10vh;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+}
+.e-title{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 40px 10px 40px 10px;
+}
+.cards{
+    width: 100%;
+    padding: 5vh;
+    border: 1px rgba(130, 126, 126, 0.452) solid;
+    border-radius: 20px;
+    margin:3vh 0 3vh 0;
+    background:linear-gradient(160deg,rgb(90, 65, 255),rgba(187, 99, 255, 0.74),rgba(185, 99, 255, 0.74),rgb(97, 65, 255));
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    gap: 20px;
+}

@@ -1,20 +1,21 @@
 .outer-box{
     width: 100%;
     min-height: 100vh;
-    background-image:url(/public/header.webp);
+    background-image:url(../../assets/header.webp);
+    background-position: center;
     background-size: cover;
     color: white;
     background-blend-mode:darken;
 }
 .main{
-    width: 100vw;
+    width: 100%;
     height:80vh;
     display: flex;
     align-items: center;
     justify-items:center;
     justify-content: space-evenly;
 }
-.card{
+.l-card{
     border: 1px white solid;
     border-radius: 20px;
     width: 30vw;
@@ -27,13 +28,13 @@
     transition: all ease-in 0.4s;
     background-color: rgba(252, 230, 255, 0.314);
 }
-.card:hover{
+.l-card:hover{
     font-size: 50px;
     background-color: #8119ff71;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
     transform: scale(102%);
 }
-.card:hover .data{
+.l-card:hover .data{
     background-color: rgb(184, 184, 184);
     width: 100%;
     text-align: center;
@@ -51,4 +52,13 @@
     color: rgb(255, 255, 255);
     padding: 10px;
     bottom: 2vh;
+}
+@media only screen and (max-width: 800px) {
+.main{
+    flex-flow: column wrap;
+}
+.l-card{
+    min-width: 60vw;
+    height: 20vh;
+}
 }

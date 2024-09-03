@@ -1,39 +1,41 @@
 .div{
     position:relative;
     top: 10vh;
-    background-color: rgb(0, 0, 0);
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content:space-evenly;
+    justify-content:space-around;
     padding-top: 18vh;
+    background-image: url(../../assets/contact.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode:hard-light;
+    background-color: rgb(255, 255, 255);
 }
 .left{
     display: flex;
     flex-flow: column wrap;
     gap: 25px;
     width: 28vw;
+    align-items: flex-start;
 }
 .left>h1{
-    font-size: 60px;
-    font-weight: 700;
-    color: var(--primary);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.left>div{
-    font-size: 24px;
-    opacity: 80%;
+    display: none;
 }
 .right{
     width: 30vw;
     height: fit-content;
-    background-color: rgba(106, 0, 255, 0.51);
+    background-color: rgba(106, 0, 255, 0.633);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 10px 10px 30px #9a40dfe1;
+    box-shadow: 15px 15px 40px #9a40dfe1;
     margin:0 0 10% 0;
+    transition: all ease-in-out 0.2s;
+}
+.right:hover,.right:active{
+    border-bottom: 8px solid rgb(0, 0, 0);
 }
 .form{
     display: flex;
@@ -57,29 +59,45 @@ input[type="text"], input[type="email"], textarea {
 
 .disable{
     cursor: not-allowed;
-    background-color: red;
+    background-color: rgba(110, 110, 110, 0.697);
 }
-
+.button{
+    width: 30%;
+    padding: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all ease-in-out 0.3s;
+}
+.button:hover, .button:active{
+    border: 1px white solid;
+}
+.button:active{
+    transform: scale(80%);
+}
 .p{
-    font-size: 16px;
-    font-weight: bold;;
+    font-size: 24px;
+    font-weight: 500;
 }
 @media only screen and (max-width: 800px) {
     .div{
         top:0;
         padding-top: 13vh;
+        background-image: none;
     }
     .left{
         width: 90vw;
+        height: auto;
+        justify-content: center;
     }
     .left>h1{
         font-size: 40px;
+        display: block;
     }
     .left>div{
         font-size: 20px;
     }
     .right{
         width: 90vw;
-        margin: 20% 0;
     }
 }

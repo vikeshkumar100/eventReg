@@ -43,9 +43,14 @@
 }
 
 @media only screen and (max-width: 800px){
-    .left-head{
-        display: none;
-    }    
+    .navbar{
+        flex-flow: column wrap;
+        padding: 3px;
+    }
+    .left-head>img{
+        height: 40px;
+        width: 40px;
+    }
     .right-head{
         width: 100%;
         justify-content: space-between;

@@ -1,0 +1,30 @@
+.e-card{
+    min-width: 21vw;
+    padding: 14px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.288);
+    text-align: left;
+    transition: all ease-out 0.5s;
+}
+e.card>h2{
+    display: none;
+}
+.e-card:hover{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+.e-card:hover>h2{
+    display: block;
+    border-radius: 10px;
+}
+.e-card:hover>h1,.e-card:hover>h3{
+    display: none;
+}
+.e-card>h1,.e-card>h3{
+    display: block;
+}
+.e-card:active{
+    transform: scale(90%);
+}

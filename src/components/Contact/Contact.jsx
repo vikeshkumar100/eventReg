@@ -1,6 +1,7 @@
 import React,{ useRef, useState } from "react";
 import "./contact.css";
 import emailjs from '@emailjs/browser';
+import contactimg from '../../assets/contact.jpg'
   
 
 const Contact = () => {
@@ -9,12 +10,10 @@ const Contact = () => {
   function handleClick()
   {
     setdisable(true);
-    setTimeout(() => {
-      setdisable(false);
-    }, 3000);
   }
   const sendEmail = (e) => {
     e.preventDefault();
+    handleClick();
 
     emailjs
       .sendForm('service_7fzzmul', 'template_kqqxv6h', form.current, {
@@ -25,21 +24,19 @@ const Contact = () => {
           console.log('SUCCESS!');
           alert("Email sent,thank you");
           form.current.reset();
+          setdisable(false);
         },
         (error) => {
+          alert("Error",error.text);
           console.log('FAILED...', error.text);
+          setdisable(false);
         },
       );
   };
   return (
     <div className="div">
       <div className="left">
-        <h1>Any Queries ?</h1>
-        <div>
-          <div>Need to clarify any query with us?</div>
-          <div>Fill out the form with your
-          inquiry and we will reach you out soon</div>
-        </div>
+      <h1>Any Queries ?</h1>
       </div>
       <div className="right">
         <form className="form" ref={form} onSubmit={sendEmail}>
@@ -57,9 +54,10 @@ const Contact = () => {
           <textarea
             className="textarea"
             name="message"
-            rows="3" required
+            rows="3"
+            required
           ></textarea>
-        <input className={`button ${isdisable ? 'disable' : ''}`} type="submit" value="Submit" onSubmit={handleClick} />
+        <input className={`button ${isdisable ? 'disable' : ''}`} type="submit" value="Submit" disabled={isdisable}/>
         </form>
       </div>
     </div>

@@ -5,8 +5,56 @@
     scroll-padding-top: 10vh;
     scroll-behavior: smooth;
 }
-.main{
+.box{
     margin-top: 10vh;
+    background-color: aliceblue;
+    background-image: url(../../assets/home.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     min-height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.image{
+    display: none;
+}
+.text{
+    background-color: rgba(0, 0, 0, 0.493);
+    color: white;
+    width: 32%;
+    border-radius: 10px;
+    font-size: 26px;
+    padding-left: 10px;
+    transition: all ease-in-out 0.4s;
+}
+.text:hover{
+    border-radius: 30px;
+    transform:scale(135%);
+    background-color: rgba(0, 0, 0, 0.773);
+    border-bottom: 10px solid rgb(104, 104, 104);
+}
+@media only screen and (max-width: 800px) {
+.box{
+    background-image: url(../../assets/header.webp) !important;
+    background-image: none;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+.text{
+    min-width: 80vw;
+}
+.text:hover{
+    border-radius: 30px;
+    transform:scale(120%);
+}
+.image{
+    display: block;
+}
+.image>img{
+    width: 100%;
+    border-radius: 60% 0% 30% 10%;
+}
 }
