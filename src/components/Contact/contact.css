@@ -10,8 +10,7 @@
     background-image: url(../../assets/contact.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-blend-mode:hard-light;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(212, 212, 212, 0.444);
 }
 .left{
     display: flex;

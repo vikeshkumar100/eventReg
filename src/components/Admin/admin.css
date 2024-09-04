@@ -1,0 +1,125 @@
+.panel{
+    width: 100%;
+    min-height: 90vh;
+    margin-top: 10vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.panel-heading{
+    width: 100%;
+    font-size: 26px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 5px 5px 30px rgba(255, 255, 255, 0.689);
+}
+
+/* event registration details */
+
+.registered,.events{
+    width: 100%;
+    font-size: 24px;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 255, 0.414);
+    border-bottom:20px black solid ;
+}
+.panel-title{
+    background-color: white;
+    padding: 15px 20px;
+    width:fit-content;
+    border-radius: 40px 0 40px 0;
+}
+.reg-table>table{
+    padding: 10px;
+    width: 100%;
+}
+.reg-table{
+    overflow: auto;
+}
+.reg-table th,td{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 26px;
+    text-align: center;
+}
+.reg-table th{
+    background-color: black;
+    color: white;
+}
+.reg-table tr{
+    transition: all ease-in-out 0.4s;
+    color: rgb(24, 24, 24);
+    background-color: rgba(192, 192, 192, 0.686);
+    font-weight: 500;
+}
+.reg-table tr:hover{
+    background-color:white;
+}
+
+/* events */
+
+.panel-event-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.add-btn{
+    padding: 5px 10px;
+    font-size: 26px;
+    color: white;
+    background-color: black;
+    transition: all ease-in-out 0.2s;
+}
+.add-btn:hover{
+    background-color: rgba(75, 75, 75, 0.862);
+    border: -1px solid rgb(0, 0, 0);
+    transform: scale(110%);
+}
+.add-btn:active{
+    transform: scale(80%);
+}
+
+.panel-event-body{
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.event-main{
+    width: 75%;
+    padding: 5vh;
+    border-radius: 20px;
+    background:linear-gradient(160deg,rgb(90, 65, 255),rgba(187, 99, 255, 0.74),rgba(185, 99, 255, 0.74),rgb(97, 65, 255));
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+.event-delete{
+    width: 25%;
+    border: 3px rgb(255, 0, 0) dashed;
+    border-radius: 20px;
+    background-color: rgba(255, 0, 0, 0.304);
+    transition: all ease-out 0.3s;
+    text-align: center;
+    font-weight: bold;
+}
+.event-delete:hover{
+    background-color: rgba(255, 0, 0, 0.629);
+}
+.event-delete>h2{
+    display: none;
+}
+
+.event-delete:hover h2{
+    display: block;
+}
+@media only screen and (max-width: 800px){
+    .reg-table th,td{
+        padding:4px 10px;
+        font-size: 22px;
+    }
+}

@@ -8,11 +8,12 @@ const Card = (props) => {
     }
   return (
     <>
-        <button className="e-card" onClick={handleclick}>
+        <button className="e-card" onClick={handleclick} draggable>
             <h1>{props.name}</h1>
+            <h3>Date : {props.date}</h3>
+            <h3>Time : {props.time}</h3>
+            <h3>Venue : {props.location}</h3>
             <h2>Click to Register</h2>
-            <h3>{props.time}</h3>
-            <h3>{props.location}</h3>
         </button>
     </>
   )

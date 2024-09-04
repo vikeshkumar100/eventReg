@@ -1,30 +1,46 @@
 .e-card{
     min-width: 21vw;
-    padding: 14px;
+    padding: 14px 6px;
     border: 1px black solid;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.288);
     text-align: left;
     transition: all ease-out 0.5s;
+    font-size: 16px;
 }
-e.card>h2{
-    display: none;
+.e-card h1{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+.e-card h3{
+    padding: 5px;
+}
+.e-card h2{
+    display:none !important;
 }
 .e-card:hover{
     background-color: black;
     text-align: center;
     color: white;
 }
-.e-card:hover>h2{
-    display: block;
+.e-card:hover h2{
+    display: block !important;
     border-radius: 10px;
 }
-.e-card:hover>h1,.e-card:hover>h3{
+.e-card:hover h1,.e-card:hover h3{
     display: none;
-}
-.e-card>h1,.e-card>h3{
-    display: block;
 }
 .e-card:active{
     transform: scale(90%);
+}
+@media only screen and (max-width: 800px){
+    .e-card{
+        min-width: 100%;
+    }
+    .e-card h1{
+        font-size: 26px;
+    }
 }
