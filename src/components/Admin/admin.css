@@ -77,6 +77,7 @@
     background-color: rgba(75, 75, 75, 0.862);
     border: -1px solid rgb(0, 0, 0);
     transform: scale(110%);
+    cursor: pointer;
 }
 .add-btn:active{
     transform: scale(80%);
@@ -122,5 +123,24 @@
     .reg-table th,td{
         padding:4px 10px;
         font-size: 22px;
+    }
+    .panel-heading{
+        font-size: 20px;
+    }
+    .panel-title{
+        padding: 10px 10px;
+    }
+    .panel-event-head{
+        font-size: 20px;
+    }
+    .panel-event-body{
+        padding: 10px 0;
+    }
+    .event-main{
+        width: 65%;
+        padding: 1vh;
+    }
+    .event-delete{
+        width: 35%;
     }
 }

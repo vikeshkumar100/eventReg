@@ -9,12 +9,13 @@ const Admin = () => {
   const [users, setUsers] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
+  const adminpwd=import.meta.env.VITE_Admin_pwd;
 
   useEffect(() => {
     // Check authentication
     if (!isAuthenticated) {
       const pwd = prompt("Enter password:");
-      if (pwd === "123") {
+      if (pwd === adminpwd) {
         setIsAuthenticated(true);  // Set authenticated state to true
       } else {
         alert("Wrong password");

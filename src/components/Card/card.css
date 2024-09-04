@@ -26,6 +26,7 @@
     background-color: black;
     text-align: center;
     color: white;
+    cursor: pointer;
 }
 .e-card:hover h2{
     display: block !important;

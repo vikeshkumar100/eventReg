@@ -47,7 +47,7 @@ const Events = () => {
                     {events.map((event) => (
                         <Card
                             key={event.id}
-                            name={event.name} // Use correct property names
+                            name={event.name} 
                             date={event.date}
                             time={event.time}
                             location={event.location}

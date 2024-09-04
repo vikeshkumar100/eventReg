@@ -6,13 +6,11 @@ const Home = () => {
   return (
     <>
       <div className="box">
-        <div className="image">
+        <div className="image">  {/* for mobile */}
           <img src={image} alt="" />
         </div>
         <div className="text">
-          <h1>Here you can</h1>
-          <h1>register and manage</h1>
-          <h1>the events</h1>
+          <h1>Here you can register and manage the events</h1>
         </div>
       </div>
       <Landing/>

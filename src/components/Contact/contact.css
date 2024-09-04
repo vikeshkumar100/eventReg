@@ -70,6 +70,7 @@ input[type="text"], input[type="email"], textarea {
 }
 .button:hover, .button:active{
     border: 1px white solid;
+    cursor: pointer;
 }
 .button:active{
     transform: scale(80%);

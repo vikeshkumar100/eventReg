@@ -4,6 +4,10 @@
     margin: 0;
     scroll-padding-top: 10vh;
     scroll-behavior: smooth;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
 }
 .box{
     margin-top: 10vh;
@@ -45,6 +49,7 @@
 }
 .text{
     min-width: 80vw;
+    font-size: 22px;
 }
 .text:hover{
     border-radius: 30px;
