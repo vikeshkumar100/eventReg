@@ -7,6 +7,7 @@
     text-align: left;
     transition: all ease-out 0.5s;
     font-size: 16px;
+    min-height: 24vh;
 }
 .e-card h1{
     width: 100%;

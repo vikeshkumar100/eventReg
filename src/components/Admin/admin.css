@@ -117,6 +117,7 @@
 .event-delete:hover h2{
     display: block;
 }
+
 @media only screen and (max-width: 800px){
     .reg-table th,td{
         padding:4px 10px;
