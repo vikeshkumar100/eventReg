@@ -1,6 +1,6 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import { Auth0Provider } from '@auth0/auth0-react';
 import Layout from './Layout'
 import Events from './components/Eventss/Events'
 import Admin from './components/Admin/Admin'
@@ -19,7 +19,13 @@ const router=createBrowserRouter(
   )
 )
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <Auth0Provider
+    domain={import.meta.env.VITE_Auth_Domain}
+    clientId={import.meta.env.VITE_Auth_ClientId}
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
     <RouterProvider router={router} />
-  </StrictMode>,
+  </Auth0Provider>,
 )

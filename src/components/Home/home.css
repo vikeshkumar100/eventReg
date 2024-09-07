@@ -49,7 +49,7 @@ a{
 }
 .text{
     min-width: 80vw;
-    font-size: 22px;
+    font-size: 18px;
 }
 .text:hover{
     border-radius: 30px;

@@ -41,11 +41,19 @@
 .notActive:hover{
     color:rgb(38, 0, 91);
 }
+.authbtn{
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10%;
+}
 
 @media only screen and (max-width: 800px){
     .navbar{
         flex-flow: column wrap;
         padding: 3px;
+    }
+    .left-head h1{
+        font-size: 24px;
     }
     .left-head>img{
         height: 40px;
@@ -54,5 +62,14 @@
     .right-head{
         width: 100%;
         justify-content: space-between;
+    }
+    .right-head>ul{
+        display: flex;
+        list-style: none;
+        font-size: 18px;
+        justify-content: space-evenly;
+    }
+    .uname{
+        display: none;
     }
 }

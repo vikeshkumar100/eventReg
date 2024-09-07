@@ -1,17 +1,23 @@
 import React from 'react';
 import './card.css';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Card = ({ name, date, time, location, onClick, onDragStart }) => {
+    const { isAuthenticated,user } = useAuth0();
     const handleClick = () => {
-        const userName = prompt("Enter your name:");
-        const regno = prompt("Enter your registration number:");
-        
-        if (userName && regno) {
-            onClick(userName, regno);  // Pass userName and regno to the parent handler
-        } else {
-            alert("Registration failed. Please enter valid details.");
-        }
-    };
+        if(isAuthenticated)
+        {
+            const userName = user.name;
+            const regno = prompt("Enter your registration number:");
+            
+            if (userName && regno) {
+                onClick(userName, regno);  // Pass userName and regno to the parent handler
+            } else {
+                alert("Registration failed. Please enter valid details.");
+            }
+        }else{
+            alert("Login is required")};
+        }            
 
     const handleDragStart = (e) => {
         // Store the ID or relevant data in the dataTransfer object

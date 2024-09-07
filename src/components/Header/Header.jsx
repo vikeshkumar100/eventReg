@@ -2,7 +2,9 @@ import React from 'react'
 import './header.css'
 import img from '../../assets/registration-form.png'
 import { NavLink} from 'react-router-dom'
+import { useAuth0 } from "@auth0/auth0-react";
 const Header = () => {
+  const { loginWithRedirect,logout, isAuthenticated,user,isLoading } = useAuth0();
   return (
       <>
         <div className="navbar">
@@ -23,6 +25,13 @@ const Header = () => {
                     </li>
                     <li>
                       <NavLink to='/admin' className={({isActive})=>`${isActive ? "active" : "notActive"}`}>Admin</NavLink>
+                    </li>
+                    <li>
+                      {isAuthenticated?(<div>
+                        <span className='uname'>{user.name}  </span>
+                        <button className='authbtn' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button>
+                      </div>):
+                      (<button className='authbtn' onClick={() => loginWithRedirect()}>Log In</button>)}
                     </li>
                   </ul>
               </div>
