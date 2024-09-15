@@ -18,7 +18,7 @@
 }
 .cards{
     width: 100%;
-    padding: 5vh;
+    padding: 30px 0px 50px 50px;
     border: 1px rgba(130, 126, 126, 0.452) solid;
     border-radius: 20px;
     margin:3vh 0 3vh 0;
@@ -26,9 +26,9 @@
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
-    gap: 20px;
+    flex-shrink: none;
+    gap: 10px;
 }
-
 @media only screen and (max-width:800px)
 {
     .container{

@@ -1,12 +1,15 @@
 import React,{ useRef, useState } from "react";
 import "./contact.css";
 import emailjs from '@emailjs/browser';
-import contactimg from '../../assets/contact.jpg'
-  
+import contactimg from '../../assets/contact.jpg';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const form = useRef();
   const [isdisable, setdisable] = useState(false);
+  const success = () => toast.success("Email sent,thank you");
+    const failed = () => toast.error("Sorry some error occured!");
   function handleClick()
   {
     setdisable(true);
@@ -22,18 +25,19 @@ const Contact = () => {
       .then(
         () => {
           console.log('SUCCESS!');
-          alert("Email sent,thank you");
+          success();
           form.current.reset();
           setdisable(false);
         },
         (error) => {
-          alert("Error",error.text);
+          failed();
           console.log('FAILED...', error.text);
           setdisable(false);
         },
       );
   };
   return (
+    <>
     <div className="div">
       <div className="left">
       <h1>Any Queries ?</h1>
@@ -61,6 +65,8 @@ const Contact = () => {
         </form>
       </div>
     </div>
+    <ToastContainer position="top-center"/>
+    </>
   );
 };
 

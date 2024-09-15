@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './events.css';
 import Card from '../Card/Card';
 import { fetchEvents, registerForEvent } from '../../firebaseConfig';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Events = () => {
     const [events, setEvents] = useState([]);
-
+    const success = () => toast.success("Registered successfully!");
+    const failed = () => toast.error("Registration failed!");
     useEffect(() => {
         const getEvents = async () => {
             try {
@@ -30,9 +33,9 @@ const Events = () => {
 
         try {
             await registerForEvent(userData);
-            alert("Registered successfully");
+            success();
         } catch (error) {
-            alert("Registration failed");
+            failed();
             console.error("Error registering for event:", error);
         }
     };
@@ -56,6 +59,7 @@ const Events = () => {
                     ))}
                 </div>
             </div>
+            <ToastContainer position="top-center"/>
         </>
     );
 };

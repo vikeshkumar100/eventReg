@@ -3,6 +3,8 @@ import './admin.css';
 import { fetchRegisteredUsers, fetchEvents, addEvent, deleteEvent } from '../../firebaseConfig'; // Adjust import if needed
 import Card from '../Card/Card';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Admin = () => {
   const [events, setEvents] = useState([]);
@@ -11,14 +13,16 @@ const Admin = () => {
   const navigate = useNavigate();
   const adminpwd=import.meta.env.VITE_Admin_pwd;
 
+  const success = () => toast.success("Welcome to admin panel!");
   useEffect(() => {
     // Check authentication
     if (!isAuthenticated) {
       const pwd = prompt("Enter password:");
       if (pwd === adminpwd) {
-        setIsAuthenticated(true);  // Set authenticated state to true
+        setIsAuthenticated(true);
+        success();  // Set authenticated state to true
       } else {
-        alert("Wrong password");
+        alert("Wrong password!");
         navigate('/');  // Redirect to home route if password is incorrect
       }
     }
@@ -159,6 +163,7 @@ const Admin = () => {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 };

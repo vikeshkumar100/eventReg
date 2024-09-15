@@ -1,9 +1,12 @@
 import React from 'react';
 import './card.css';
 import { useAuth0 } from "@auth0/auth0-react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Card = ({ name, date, time, location, onClick, onDragStart }) => {
     const { isAuthenticated,user } = useAuth0();
+    const notify = () => toast.error("Login is required!");
     const handleClick = () => {
         if(isAuthenticated)
         {
@@ -16,7 +19,8 @@ const Card = ({ name, date, time, location, onClick, onDragStart }) => {
                 alert("Registration failed. Please enter valid details.");
             }
         }else{
-            alert("Login is required")};
+            notify();
+        };
         }            
 
     const handleDragStart = (e) => {
@@ -28,6 +32,7 @@ const Card = ({ name, date, time, location, onClick, onDragStart }) => {
     };
 
     return (
+        <>
         <button 
             id={`card-${name}`}  // Ensure each card has a unique ID
             className="e-card" 
@@ -39,8 +44,10 @@ const Card = ({ name, date, time, location, onClick, onDragStart }) => {
             <h3>Date: {date}</h3>
             <h3>Time: {time}</h3>
             <h3>Venue: {location}</h3>
-            <h2>Click to Register</h2>
+            <h2>Click to Register</h2> 
         </button>
+        <ToastContainer position="top-center"/>
+        </>
     );
 };
 
