@@ -1,13 +1,18 @@
 .e-card{
-    min-width: 21vw;
+    width: 20vw;
     padding: 14px 6px;
     border: 1px black solid;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.288);
     text-align: left;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
     transition: all ease-out 0.5s;
     font-size: 16px;
     min-height: 24vh;
+    margin: 10px;
 }
 .e-card h1{
     width: 100%;

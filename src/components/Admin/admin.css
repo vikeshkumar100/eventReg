@@ -97,7 +97,6 @@
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
-    gap: 20px;
 }
 .event-delete{
     width: 25%;
