@@ -25,7 +25,7 @@
     background:linear-gradient(160deg,rgb(90, 65, 255),rgba(187, 99, 255, 0.74),rgba(185, 99, 255, 0.74),rgb(97, 65, 255));
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-flow: row wrap;
     margin: auto;
 }
