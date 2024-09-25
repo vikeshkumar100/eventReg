@@ -14,7 +14,7 @@ const Admin = () => {
   useEffect(() => {
     // Check authentication
     if (!isAuthenticated) {
-      const pwd = prompt("Enter password:");
+      const pwd = prompt("Enter password: (password - 22bca0200)");
       if (pwd === adminpwd) {
         setIsAuthenticated(true);
         alert("Welcome to admin panel!")  // Set authenticated state to true
